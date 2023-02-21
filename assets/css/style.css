@@ -180,8 +180,21 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   align-items: center;
 }
+@media (min-width: 993px) {
+  .navbar ul {
+    display: none;
+  }
+
+  #header.header-scrolled .navbar ul {
+    display: flex;
+  }
+}
 .navbar li {
   position: relative;
+  transition: 0.3s;
+}
+.navbar li:hover {
+  transform: scale(1.1);
 }
 .navbar a, .navbar a:focus {
   display: flex;
@@ -225,6 +238,11 @@ h1, h2, h3, h4, h5, h6 {
   .navbar ul {
     display: none;
   }
+
+  .navbar li:hover {
+    transform: scale(1.1);
+    margin-left: 10%;
+  }
 }
 .navbar-mobile {
   position: fixed;
@@ -264,6 +282,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
   margin: 15px;
+}
+
+.navbar .bi-x {
+  z-index: 9998;
 }
 
 /*--------------------------------------------------------------
@@ -522,6 +544,47 @@ section {
   #works .video-description p {
     font-size: 20px;
   }
+}
+
+/* Techs Section
+--------------------------------*/
+#techs {
+  padding: 60px 0;
+  text-align: center;
+}
+#techs .section-header {
+  padding: 120px 0 20px 0;
+}
+#techs .parent-section {
+  padding: 0 0 30px 0;
+}
+#techs .techs-wrap {
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  transition: 0.3s;
+}
+#techs .techs-wrap:hover {
+  filter: drop-shadow(0 0 6px rgb(0, 255, 255));
+}
+#techs .techs-item {
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+#techs .techs-item:hover {
+  transform: scale(1.25);
+}
+#techs .techs-item figure {
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+#techs .techs-description {
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* awards Section
